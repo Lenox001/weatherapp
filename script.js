@@ -77,9 +77,10 @@ document.getElementById('cityInput').value = "";
             
                 document.getElementById("loc-weather").style.backgroundColor="darkgrey"
                
-                document.getElementById("loc-weather").style.fontFamily="Cambria"
+                document.getElementById("loc-weather").style.fontFamily="'Poppins'"
                 document.getElementById("loc-weather").style.fontSize="2rem"
                 document.getElementById("loc-weather").style.color="black"
+                document.getElementById("loc-weather").style.opacity = 1;
         
             })
             .catch(error => {
