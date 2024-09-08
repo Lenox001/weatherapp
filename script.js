@@ -72,7 +72,7 @@ document.getElementById('cityInput').value = "";
                 const location = data.location.name
                 const weatherDescription = data.current.condition.text;
                 const iconUrl = data.current.condition.icon
-                document.getElementById("loc-weather").innerHTML = `<img src="https:${iconUrl}" alt="Weather icon">${location}<br>Temperature: ${temp}°C <br>${weatherDescription} 
+                document.getElementById("loc-weather").innerHTML = `<img src="https:${iconUrl}" alt="Weather icon">${location}<br> ${temp}°C <br>${weatherDescription} 
                  `;
             
                 document.getElementById("loc-weather").style.backgroundColor="darkgrey"
