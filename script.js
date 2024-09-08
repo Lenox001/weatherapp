@@ -1,4 +1,4 @@
-   document.getElementById("searchBtn").addEventListener("click",function(){
+document.getElementById("searchBtn").addEventListener("click",function(){
     const city=document.getElementById("cityInput").value.trim()
     const apiKey = '045fe8528bbb4dba8e874938240409';  
 const baseUrl = 'https://api.weatherapi.com/v1/current.json';
@@ -33,7 +33,7 @@ if (city){
         forecast.style.border="3px"
         forecast.style.borderRadius="20px"
         forecast.style.fontFamily="Cambria"
-        myLocation.style.display="none"
+        document.getElementById("loc-weather").style.display="none"
         
 
 
@@ -50,7 +50,7 @@ document.getElementById('cityInput').value = "";
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     } else {
-        myLocation.innerHTML = "Unsupported Location";
+        document.getElementById("loc-weather").innerHTML = "Unsupported Location";
     }
 
     function success(position) {
@@ -69,31 +69,19 @@ document.getElementById('cityInput').value = "";
                 return response.json();
             })
             .then(data => {
-                const myTemp=document.getElementById("Loctemp")
-                const tempp=data.current.temp_c;
-                 myTemp.textContent = `${tempp}°C`
-                 myTemp.style.fontSize="2rem"
-                 const geolocate=document.getElementById("locName")
-                 geolocate.textContent = data.location.name
-                  const weatherDescription=document.getElementById("locdesc")
-                 weatherDescription.textContent = data.current.condition.text;
-                 const iconUrl=document.getElementById("locICON")
-                iconUrl.src = data.current.condition.icon
-                const myLocation=document.getElementById("loc-weather")
+                const temp = data.current.temp_c;
+                const location = data.location.name
+                const weatherDescription = data.current.condition.text;
+                const iconUrl = data.current.condition.icon
+                document.getElementById("loc-weather").innerHTML = `<img src="https:${iconUrl}" alt="Weather icon">${location}<br> ${temp}°C <br>${weatherDescription} 
+                 `;
             
-                myLocation.style.backgroundColor="darkgrey"
+                document.getElementById("loc-weather").style.backgroundColor="darkgrey"
                
-                myLocation.style.fontFamily="'Poppins'"
-                myLocation.style.fontSize="1.4rem"
-                myLocation.style.color="black"
-                myLocation.style.opacity = 1;
-                myLocation.style.display="flex"
-                myLocation.style.alignItems = "center"
-                myLocation.style.justifyContent = "space-between";
-                myLocation.style.paddingRight = "20px"; 
-                iconUrl.style.float = "left"; 
-                
-                
+                document.getElementById("loc-weather").style.fontFamily="'Poppins'"
+                document.getElementById("loc-weather").style.fontSize="2rem"
+                document.getElementById("loc-weather").style.color="black"
+                document.getElementById("loc-weather").style.opacity = 1;
                  document.getElementById("loadingMessage").style.display = "none"
         
             })
