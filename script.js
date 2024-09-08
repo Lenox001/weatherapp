@@ -92,7 +92,7 @@ document.getElementById('cityInput').value = "";
                 myLocation.style.justifyContent = "space-between";
                 myLocation.style.padding = "2px"; 
                 iconUrl.style.float = "left"; 
-                iconUrl.style.marginRight = "15px"
+                
                 iconUrl.style.marginTop = "0"
                  document.getElementById("loadingMessage").style.display = "none"
         
