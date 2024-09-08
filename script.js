@@ -90,10 +90,10 @@ document.getElementById('cityInput').value = "";
                 myLocation.style.display="flex"
                 myLocation.style.alignItems = "center"
                 myLocation.style.justifyContent = "space-between";
-                myLocation.style.padding = "2px"; 
+                myLocation.style.paddingRight = "20px"; 
                 iconUrl.style.float = "left"; 
                 
-                iconUrl.style.marginTop = "0"
+                
                  document.getElementById("loadingMessage").style.display = "none"
         
             })
