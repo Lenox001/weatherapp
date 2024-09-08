@@ -46,6 +46,7 @@ document.getElementById('cityInput').value = "";
 
    })
    function getWeather() {
+    document.getElementById("loadingMessage").style.display = "block";
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     } else {
@@ -81,16 +82,19 @@ document.getElementById('cityInput').value = "";
                 document.getElementById("loc-weather").style.fontSize="2rem"
                 document.getElementById("loc-weather").style.color="black"
                 document.getElementById("loc-weather").style.opacity = 1;
+                 document.getElementById("loadingMessage").style.display = "none"
         
             })
             .catch(error => {
                 console.error('Error fetching weather data:', error);
                 document.getElementById('loc-weather').innerHTML = 'Unable to retrieve weather data.';
+                document.getElementById("loadingMessage").style.display = "none";
             });
     }
 
     function error() {
         document.getElementById('loc-weather').innerHTML = 'Unable to retrieve your location.';
+        document.getElementById("loadingMessage").style.display = "none";
     }
 }
 
