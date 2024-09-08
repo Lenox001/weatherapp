@@ -11,6 +11,16 @@
   <!-- Custom CSS -->
   
 <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  .custom-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #343a40; 
+  }
+
+
     
     body {
       background: linear-gradient(to bottom, #74d7c5, #575d77);
@@ -105,7 +115,9 @@
       margin-bottom: 20px;
       opacity: 0;  /* Start as invisible */
       transition: opacity 1s ease-in-out; /* 1-second fade-in effect */
+      
 }
+
     
 
     @keyframes fadeInUp {
@@ -144,7 +156,7 @@
           <input type="text" id="cityInput" class="form-control form-control-lg mx-1" placeholder="Enter city name..." />
           <button id="searchBtn" class="btn btn-custom mt-3 btn-lg">Get Weather</button>
         </div>
-        <div id="loadingMessage" style="display:none;" class="text-dark">Loading weather data...</div>
+        <div id="loadingMessage" style="display:none;" class="custom-text">Loading weather data...</div>
 
         <div class="container text-bold border rounded p-2 my-2 text-center " id="loc-weather">
           
