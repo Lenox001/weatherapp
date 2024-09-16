@@ -59,6 +59,9 @@ document.getElementById('cityInput').value = "";
         const apiKey = '045fe8528bbb4dba8e874938240409'; 
         const baseUrl = `https://api.weatherapi.com/v1/current.json`;
         const url = `${baseUrl}?key=${apiKey}&q=${lat},${lon}&units=metric`;
+        localStorage.setItem('lat', lat);
+        localStorage.setItem('lon', lon);
+
 
 
         fetch(url)
@@ -81,6 +84,7 @@ document.getElementById('cityInput').value = "";
                 document.getElementById("loc-weather").style.fontFamily="'Poppins'"
                 document.getElementById("loc-weather").style.fontSize="2rem"
                 document.getElementById("loc-weather").style.color="black"
+                document.getElementById("loc-weather").style.opacity = 1;
                 document.getElementById("loc-weather").style.opacity = 1;
                  document.getElementById("loadingMessage").style.display = "none"
         
