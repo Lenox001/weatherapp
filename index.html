@@ -9,19 +9,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   
   <!-- Custom CSS -->
-  
-<style>
-  
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  .custom-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #343a40; 
-  }
-
-
-    
     body {
       background: linear-gradient(to bottom, #74d7c5, #575d77);
       background-size: cover;
@@ -107,16 +97,13 @@
       color: #333;
       background: rgba(152, 119, 119, 0.8);
       padding: 20px;
-      font-family: 'Poppins', sans-serif;;
+      font-family: 'Poppins', sans-serif;
       text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
-      opacity: 0;  /* Start as invisible */
+      opacity: 0; /* Start as invisible */
       transition: opacity 1s ease-in-out; /* 1-second fade-in effect */
-      
-}
-
-    
+    }
 
     @keyframes fadeInUp {
       from {
@@ -134,21 +121,19 @@
       body {
         padding: 20px;
       }
-      
+
       .container {
         padding: 15px;
       }
     }
   </style>
-
-</style>
 </head>
 <body>
 
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        
+
         <!-- Search Section -->
         <div class="search-section">
           <input type="text" id="cityInput" class="form-control form-control-lg mx-1" placeholder="Enter city name..." />
@@ -156,21 +141,17 @@
         </div>
         <div id="loadingMessage" style="display:none;" class="custom-text">Loading weather data...</div>
 
-        <div class="container" id="loc-weather">
-          <img src="" id="locICON" class="weather-icon m-2" alt="Weather Icon" >
+        <div id="loc-weather">
+          <img src="" id="locICON" class="weather-icon m-2" alt="Weather Icon" />
           <div>
             <h2 id="locName" class="mt-1"></h2>
-          
-          <p id="Loctemp" class="temperature"></p>
-          <p id="locdesc" class="condition"></p>
-
+            <p id="Loctemp" class="temperature"></p>
+            <p id="locdesc" class="condition"></p>
           </div>
-          
-          
         </div>
 
         <!-- Weather Display Card -->
-        <div id="currentWeather" class=" container card text-center ">
+        <div id="currentWeather" class="card text-center">
           <h2 id="cityName" class="mt-3"></h2>
           <img src="" id="weatherIcon" class="weather-icon" alt="Weather Icon" />
           <p id="temperature" class="temperature"></p>
@@ -180,7 +161,8 @@
       </div>
     </div>
   </div>
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
